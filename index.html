@@ -14,8 +14,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="css/vendor/960_12_col.css">
+        
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -24,63 +24,72 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header>
-            <div id="logo">
+        
+        <header> 
+            <div class="container_12">
+            <div id="logo" class="grid_4">
                 <img src="img/logo.png" alt="Kaustubh Limaye" title="Home"></img>
             </div>
 
-            <nav class="nav-container">
+            <nav class="nav-container grid_8">
                 <ul>
-                    <li class="active"><a href="index.html"><i class="fa fa-home fa-fw"></i> Home</a></li>
-                    <li><a href="work.html"><i class="fa fa-suitcase fa-fw"></i> Work</a></li>
-                    <li><a href="contact.html"><i class="fa fa-phone fa-fw"></i> Contact</a></li>       
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>       
                 </ul>
            </nav> 
+           <div class="clear"></div>
+        </div>
         </header>
+        
 
         <section>
-            <div class="post">
+        <div class="container_12">
+            <div class="post grid_4">
                 <div class="post-header">
-                    <h3>About me</h3>
+                    <h3>Me</h3>
                     
                 </div>
                 <div class="post-content">
                     <div class="image-area">
                         <img src="img/me.jpg" alt="me" title="me"></img>
                     </div>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    
                 </div>
             </div>
-            <div class="post">
+            <div class="post grid_4">
                 <div class="post-header">
                     <h3>Work</h3>
                     
                 </div>
                 <div class="post-content">
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                 </div>
             </div>
-            <div class="post">
+            <div class="post grid_4">
                 <div class="post-header">
                     <h3>Contact</h3>
                 </div>
                 <div class="post-content">
-                    <p><i class="fa fa-phone fa-fw"></i> +91 99209 88180</p>
-                    <p><i class="fa fa-envelope fa-fw"></i> kaustubh.limaye@gmail.com</p>
-                    
-                    
+                    <p>+91 99209 88180</p>
+                    <p>kaustubh.s.limaye@gmail.com</p>    
                 </div>
             </div>
+            <div class="clear"></div>
+        </div>
         </section>
-
+        
         <footer>
-            <div class="container">
+        <div class="container_12">
+
+            <div class="grid_4 prefix_4 suffix_4">
                 <p>&copy; Kaustubh Limaye</p>
             </div>
+        </div>    
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
