@@ -8,3 +8,13 @@
 .center-content{
 	text-align:center;
 }
+
+.likert ul{
+
+}
+.likert li{
+
+	list-style-type: none;
+	float:left;
+	padding-right:5px;
+}
