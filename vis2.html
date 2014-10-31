@@ -34,7 +34,10 @@
 
           gData = data
 
-          var piedata1 = [{"label":"yes","units":15},{"label":"no","units":10}]
+          var feedback = getOccurance(gData, "feedback")
+          var fColors = ["#ff00ff", "#DCF13C"]
+
+          var piedata1 = makeColorArrayOfObjects(feedback,fColors)
           /*
           var pie1 = getMatches(gData, "yes", "feedback")
           var pie2 = getMatches(gData, "no", "feedback")
