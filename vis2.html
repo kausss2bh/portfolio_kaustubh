@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <h1>Ethics workshop responses visualization lets c1</h1>
+    <h1>Ethics workshop responses visualization lets c2</h1>
 
     <div id="pieChart"></div>
 
@@ -26,14 +26,23 @@
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
-          var URL = "https://docs.google.com/spreadsheets/d/11NmoOWE3gVQLAmhx5bkHJQWhkdI9tblRhSYrhy-s8tU/pubhtml"
+          var URL = "https://docs.google.com/spreadsheets/d/1ajmMXaVZfrcvbhpglfMZltdG-y2AzYh51zNCoICJvTw/pubhtml"
           Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
       })
 
       function showInfo(data) {
+
+          gData = data;
+
+          var pie1 = getMatches(gData, "yes", "feedback")
+          var pie2 = getMatches(gData, "no", "feedback")
+
+
+          var piedata1 = [{"label": "yes", "units": getOccurance(pie1,"feedback") },{"label": "no", "units": getOccurance(pie2,"feedback") }]
           var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "pieChart", hiColor: "#14ECC8"}
 
-      Sheetsee.d3PieChart(data, pieOptions)
+
+      Sheetsee.d3PieChart(piedata1, pieOptions)
       
     }
       
