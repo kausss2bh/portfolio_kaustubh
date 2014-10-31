@@ -10,21 +10,25 @@
   </head>
   <body>
 
-    <h1>pie chart letsc1</h1>
+    <h1>pie chart letsc 2</h1>
 
     <div id="holder"></div>
 
     
 
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function() {
-          var URL = "https://docs.google.com/spreadsheet/pub?key=0Aj3c4mZCQQaMdGE2TVphOWlXMUMyclRXa2Z1c0g5MGc&single=true&gid=1&output=html"
-          Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
-      })
-
+      document.addEventListener('DOMContentLoaded', runWebsite)
+    
+    function runWebsite() {
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Aj3c4mZCQQaMdGE2TVphOWlXMUMyclRXa2Z1c0g5MGc&single=true&gid=1&output=html';
+ 
+      Tabletop.init( { key: public_spreadsheet_url,
+                       callback: showInfo,
+                       simpleSheet: true } )
+ 
       function showInfo(data, tabletop) {
-
-          function pushBits(element) {
+  
+        function pushBits(element) {
           values.push(parseInt(element.total))
           labels.push(element.project)
         }
@@ -34,9 +38,8 @@
             data.forEach(pushBits)
             
         Raphael("holder", 700, 700).pieChart(350, 350, 200, values, labels, "#fff");
-      
+      }
     }
-      
 
     </script>
   </body>
