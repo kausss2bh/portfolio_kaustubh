@@ -4,42 +4,36 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
     <script type="text/javascript" src='js/sheetsee.js'></script>
-    <script src="js/raphael-min.js" type="text/javascript"></script>  
-    <script src="js/pie.js" type="text/javascript"></script> 
     <link rel="stylesheet" type="text/css" href="css/sss.css">
   </head>
   <body>
 
-    <h1>pie chart letsc 2</h1>
+    <h1>Ethics workshop responses visualization lets c1</h1>
 
-    <div id="holder"></div>
+    <div id="pieChart"></div>
 
-    
+    <script id="placeholder_template" type="text/html">
+      <table>
+        <tr><th class="tHeader">Timestamp</th><th class="tHeader">Name</th><th class="tHeader">Profession</th><th class="tHeader">Company & Designation</th><th class="tHeader">Email ID</th></tr>
+      {{#rows}}
+        <tr><td>{{timestamp}}</td><td>{{name}}</td><td>{{profession}}</td><td>{{company&amp;designation}}</td><td>{{emailid}}</td></tr>
+      {{/rows}}
+      </table>
+    </script>
 
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', runWebsite)
-    
-    function runWebsite() {
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Aj3c4mZCQQaMdGE2TVphOWlXMUMyclRXa2Z1c0g5MGc&single=true&gid=1&output=html';
- 
-      Tabletop.init( { key: public_spreadsheet_url,
-                       callback: showInfo,
-                       simpleSheet: true } )
- 
-      function showInfo(data, tabletop) {
-  
-        function pushBits(element) {
-          values.push(parseInt(element.total))
-          labels.push(element.project)
-        }
-        
-        var values = [],
-            labels = [];
-            data.forEach(pushBits)
-            
-        Raphael("holder", 700, 700).pieChart(350, 350, 200, values, labels, "#fff");
-      }
+      document.addEventListener('DOMContentLoaded', function() {
+          var URL = "https://docs.google.com/spreadsheets/d/11NmoOWE3gVQLAmhx5bkHJQWhkdI9tblRhSYrhy-s8tU/pubhtml"
+          Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+      })
+
+      function showInfo(data) {
+          var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "#pieChart", hiColor: "#14ECC8"}
+
+      Sheetsee.makeTable(pieOptions)
+      
     }
+      
 
     </script>
   </body>
