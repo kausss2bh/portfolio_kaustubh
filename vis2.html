@@ -14,6 +14,7 @@
 
     <div id="pieChart"></div>
 
+
     <script id="placeholder_template" type="text/html">
       <table>
         <tr><th class="tHeader">Timestamp</th><th class="tHeader">Name</th><th class="tHeader">Profession</th><th class="tHeader">Company & Designation</th><th class="tHeader">Email ID</th></tr>
@@ -30,7 +31,7 @@
       })
 
       function showInfo(data) {
-          var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "#pieChart", hiColor: "#14ECC8"}
+          var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "pieChart", hiColor: "#14ECC8"}
 
       Sheetsee.d3PieChart(data, pieOptions)
       
