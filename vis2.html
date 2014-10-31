@@ -32,13 +32,13 @@
 
       function showInfo(data) {
 
-          gData = data
 
+          /*
           var feedback = Sheetsee.getOccurance(gData, "feedback")
           var fColors = ["#ff00ff", "#DCF13C"]
 
           var piedata1 = Sheetsee.makeColorArrayOfObjects(feedback,fColors)
-          /*
+          
           var pie1 = getMatches(gData, "yes", "feedback")
           var pie2 = getMatches(gData, "no", "feedback")
 
@@ -49,9 +49,9 @@
           var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "pieChart", hiColor: "#14ECC8"}
 
 
-      Sheetsee.d3PieChart(piedata1, pieOptions)
+          Sheetsee.d3PieChart(data, pieOptions)
       
-    }
+      }
       
 
     </script>
