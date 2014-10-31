@@ -19,15 +19,14 @@
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
           var URL = "11NmoOWE3gVQLAmhx5bkHJQWhkdI9tblRhSYrhy-s8tU"
-          Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
+          Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
       })
-      function myData(data) {
+      function showInfo(data) {
           var tableOptions = {
-                          "data": gData,
+                          "data": data,
                           "pagination": 1,
                           "tableDiv": "#placeholder",
                           "filterDiv": "#fullTableFilter",
-                          "templateID": "placeholder"
                           
                           }
       Sheetsee.makeTable(tableOptions)
