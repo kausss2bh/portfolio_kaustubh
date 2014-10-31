@@ -22,7 +22,15 @@
           Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
       })
       function myData(data) {
-          All the sheetsee things you want to do!
+          var tableOptions = {
+                          "data": gData,
+                          "pagination": 2,
+                          "tableDiv": "#placeholder",
+                          
+                          }
+      Sheetsee.makeTable(tableOptions)
+      Sheetsee.initiateTableFilter(tableOptions)
+    }
       }
     </script>
   </body>
