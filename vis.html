@@ -9,11 +9,16 @@
   <body>
 
     <h1>Ethics workshop responses visualization</h1>
-    
+
     <div id="placeholder"></div>
 
-    <script id="placeholder" type="text/html">
-      // template if you so desire!
+    <script id="placeholder_template" type="text/html">
+      <table>
+        <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th></tr>
+      {{#rows}}
+        <tr><td>{{city}}</td><td>{{placename}}</td><td>{{year}}</td><td>{{image}}</td></tr>
+      {{/rows}}
+      </table>
     </script>
 
     <script type="text/javascript">
@@ -26,8 +31,8 @@
                           "data": data,
                           "pagination": 1,
                           "tableDiv": "#placeholder",
-                          "filterDiv": "#fullTableFilter"
-                          
+                          "filterDiv": "#fullTableFilter",
+                          "template" : "placeholder_template"
                           }
       Sheetsee.makeTable(tableOptions)
       
