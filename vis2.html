@@ -5,6 +5,8 @@
     <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
     <script type="text/javascript" src='js/sheetsee.js'></script>
     <link rel="stylesheet" type="text/css" href="css/sss.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
   </head>
   <body>
 
@@ -30,7 +32,7 @@
       function showInfo(data) {
           var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "#pieChart", hiColor: "#14ECC8"}
 
-      Sheetsee.makeTable(pieOptions)
+      Sheetsee.d3PieChart(data, pieOptions)
       
     }
       
