@@ -8,15 +8,15 @@
   </head>
   <body>
 
-    <h1>Ethics workshop responses visualization lets c2</h1>
+    <h1>Ethics workshop responses visualization lets c3</h1>
 
     <div id="placeholder"></div>
 
     <script id="placeholder_template" type="text/html">
       <table>
-        <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th></tr>
+        <tr><th class="tHeader">Timestamp</th><th class="tHeader">Name</th><th class="tHeader">Profession</th><th class="tHeader">Company & Designation</th><th class="tHeader">Email ID</th></tr>
       {{#rows}}
-        <tr><td>{{city}}</td><td>{{placename}}</td><td>{{year}}</td><td>{{image}}</td></tr>
+        <tr><td>{{timestamp}}</td><td>{{name}}</td><td>{{profession}}</td><td>{{company&designation}}</td><td>{{emailid}}</td></tr>
       {{/rows}}
       </table>
     </script>
@@ -28,7 +28,7 @@
       })
       function showInfo(data) {
           var tableOptions = {
-                          "data": data,
+                          "data": gData,
                           "pagination": 1,
                           "tableDiv": "#placeholder",
                           "filterDiv": "#fullTableFilter",
