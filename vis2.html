@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
-    <script type="text/javascript" src='js/sheetsee.js'></script>
+    <script type="text/javascript" src='js/sheetsee3.js'></script>
     <link rel="stylesheet" type="text/css" href="css/sss.css">
     <link rel="stylesheet" type="text/css" href="css/main2.css">
     
@@ -14,15 +15,20 @@
 
     <div id="pieChart"></div>
 
+    
 
-    <script id="placeholder_template" type="text/html">
+    
+
+    <script id="pieChart_template" type="text/html">
       <table>
-        <tr><th class="tHeader">Timestamp</th><th class="tHeader">Name</th><th class="tHeader">Profession</th><th class="tHeader">Company & Designation</th><th class="tHeader">Email ID</th></tr>
+        <tr><th class="tHeader">Feedback</th><th class="tHeader">Count</th></tr>
       {{#rows}}
-        <tr><td>{{timestamp}}</td><td>{{name}}</td><td>{{profession}}</td><td>{{company&amp;designation}}</td><td>{{emailid}}</td></tr>
+        <tr><td>{{feedback}}</td><td>{{count}}</td></tr>
       {{/rows}}
       </table>
     </script>
+
+    
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
@@ -31,26 +37,17 @@
       })
 
       function showInfo(data) {
-
-
-          /*
-          var feedback = Sheetsee.getOccurance(gData, "feedback")
-          var fColors = ["#ff00ff", "#DCF13C"]
-
-          var piedata1 = Sheetsee.makeColorArrayOfObjects(feedback,fColors)
           
-          var pie1 = getMatches(gData, "yes", "feedback")
-          var pie2 = getMatches(gData, "no", "feedback")
+          var barOptions = {labels: "category", units:"total", m: [60, 60, 30, 150], w: 600, h: 400, div: "#pieChart", hiColor: "#FF317D"}
+          var lineOptions = {labels: "category", units: "total", m: [120, 100, 200, 100], w: 600, h: 600, div: "#pieChart",  hiColor: "#14ECC8"}
 
-
-          var piedata1 = [{"label": "yes", "units": getOccurance(pie1,"feedback") },{"label": "no", "units": getOccurance(pie2,"feedback") }]
-
-          */
-          var pieOptions = {m: [80, 80, 80, 80], w: 600, h: 400, div: "pieChart", hiColor: "#14ECC8"}
+          
+          
+          var pieOptions = {labels: "feedback", units: Sheetsee.getOccurance(data,"feedback") , m: [80, 80, 80, 80], w: 600, h: 400, div: "#pieChart", hiColor: "#14ECC8"}
 
 
           Sheetsee.d3PieChart(data, pieOptions)
-      
+          
       }
       
 

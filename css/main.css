@@ -7,7 +7,7 @@
 
 a{
     text-decoration: none;
-    color:#dfdfdf;
+    color:#4B7DFF;
 }
 
 
@@ -19,8 +19,9 @@ a{
 }
 
 body{
-    background-image:url('http://wallpaperus.org/wallpapers/05/206/gaussian-blur-1920x1080-wallpaper-882319.jpg');
-    color:#dfdfdf;
+    /*background-image:url('http://wallpaperus.org/wallpapers/05/206/gaussian-blur-1920x1080-wallpaper-882319.jpg');
+    */
+    color:#000;
 }
 header{
     /*
