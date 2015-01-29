@@ -1,28 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
 body{
-	background:rgba(0,125,207,.1);
+	font-family: 'Inconsolata' ;
+	font-weight:400;
+	background:rgba(0,0,0,0.1);
 	color: rgba(0,0,0,0.6);
 }
 
+h4{
+	font-weight:700;
+	font-size:16px;
+	margin-bottom:0px;
+	color: rgba(0,0,0,0.7);
+}
+
+
+hr{
+	border-color: rgba(0,0,0,0.6);
+}
+
+.nav a:hover{
+	text-decoration:underline;
+}
+
+.project:hover a {
+    color:rgba(0,125,207,0.9);
+} 
+
+.project:hover a h4{
+	color:rgba(0,125,207,0.9);
+}
+
+.project:hover a img{
+	opacity:0.9;
+}
+
+a:link {
+    color: rgba(0,0,0,0.6);
+}
+
+/* visited link */
+a:visited {
+    color: rgba(0,0,0,0.6);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgba(0,0,0,0.6);
+    text-decoration:none;
+}
+
+a.active{
+	text-decoration:underline;
+}
+/* selected link */
+a:active {
+    color: rgba(0,0,0,0.6);
+}
+
+.nav {
+	font-size:15px;
+}
+
 .project{
-	background:rgba(255,255,255,0.7);
+	background:rgba(255,255,255,0.5);
 	margin-bottom:30px;
 }
 
 .media-body{
-	padding:10px;
-	padding-top:0px;
+	padding:20px;
+	padding-top:5px;
+	padding-bottom:20px;
 	font-size:13px;
 }
 
-.project-image{
-	width:100%;
+.img-round{
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
 }
 
 .project{
 	border-radius:5px;
 }
 
-.media-head{
-	padding:5px;
-	padding-left:10px;
-}
