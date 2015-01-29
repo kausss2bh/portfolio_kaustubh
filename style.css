@@ -9,6 +9,20 @@ body{
 }
 
 .media-body{
-	padding-right:5px;
+	padding:10px;
+	padding-top:0px;
 	font-size:13px;
+}
+
+.project-image{
+	width:100%;
+}
+
+.project{
+	border-radius:5px;
+}
+
+.media-head{
+	padding:5px;
+	padding-left:10px;
 }
