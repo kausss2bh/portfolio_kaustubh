@@ -46,7 +46,7 @@
     "@padding-small-horizontal": "10px",
     "@padding-xs-vertical": "1px",
     "@padding-xs-horizontal": "5px",
-    "@line-height-large": "1.33",
+    "@line-height-large": "1.3333333",
     "@line-height-small": "1.5",
     "@border-radius-base": "4px",
     "@border-radius-large": "6px",
@@ -114,7 +114,7 @@
     "@screen-xs": "480px",
     "@screen-xs-min": "@screen-xs",
     "@screen-phone": "@screen-xs-min",
-    "@screen-sm": "768px",
+    "@screen-sm": "550px",
     "@screen-sm-min": "@screen-sm",
     "@screen-tablet": "@screen-sm-min",
     "@screen-md": "992px",
@@ -425,5 +425,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=882a8a1c28ab78659245"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=d91e41c47a7cbad4f3c6"
 }
